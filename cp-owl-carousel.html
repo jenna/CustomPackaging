@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+<!-- the first step - just the basic carousel, no grid - is demo'd on the M1 test site: http://www.test.impact.local/test-jen-2 -->
+
+
+<style>
+#testimonial-carousel {max-width:300px;}
+</style>
+<script src="skin/frontend/clearbags/rwd/js/owl.carousel.js"></script>
+<div id="testimonial-carousel">
+    <div id="owl-example" class="owl-carousel owl-theme">
+        <div class="item"><img src="http://placehold.it/300x260" width="100%" height="auto" alt="Crystal Clear Bags" />Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit</div>
+        <div class="item"><img src="http://placehold.it/300x260" width="100%" height="auto" alt="Crystal Clear Bags" />Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit</div>
+        <div class="item"><img src="http://placehold.it/300x260" width="100%" height="auto" alt="Crystal Clear Bags" />Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit</div>
+        <div class="item"><img src="http://placehold.it/300x260" width="100%" height="auto" alt="Crystal Clear Bags" />Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit</div>
+        <div class="item"><img src="http://placehold.it/300x260" width="100%" height="auto" alt="Crystal Clear Bags" />Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit</div>
+        <div class="item"><img src="http://placehold.it/300x260" width="100%" height="auto" alt="Crystal Clear Bags" />Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit Lorem ipsum dolor mit</div>
+    </div>
+</div>
+<script type="text/javascript">
+// carousel http://owlcarousel2.github.io/OwlCarousel2/
+    $j(document).ready(function() {
+
+        $j("#owl-example").owlCarousel({
+            navigation: false, // Show next and prev buttons
+            navigationText: ["prev","next"],
+            slideSpeed: 1250,
+            paginationSpeed: 1250,
+            transitionStyle: "fade",
+            singleItem: true,
+            autoPlay: true,
+            stopOnHover: true
+
+           
+                    // "singleItem:true" is a shortcut for:
+                    // items : 1, 
+                    // itemsDesktop : false,
+                    // itemsDesktopSmall : false,
+                    // itemsTablet: false,
+                    // itemsMobile : false
+
+        });
+
+    });
+</script>
+
+
+   
+   
+   
