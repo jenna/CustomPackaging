@@ -1,32 +1,14 @@
 /*custom font*/
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@primary-color: #00add8;
-@primary-color: #00add8;
-
-/*basic reset*/
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Open Sans", arial, verdana;
-}
-
 hr {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
-/*form styles*/
-
 #msform {
   max-width: 1150px;
   margin: 50px auto;
   text-align: center;
   position: relative;
 }
-
 #msform fieldset {
   background: white;
   border: 0 none;
@@ -34,22 +16,18 @@ hr {
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
   padding: 100px 10% 20px 10%;
   box-sizing: border-box;
-  min-height:950px;
+  min-height: 950px;
   width: 75%;
   margin: 0 10%;
   /*stacking fieldsets above each other*/
   position: absolute;
 }
-
 /*Hide all except first fieldset*/
-
 #msform fieldset:not(:first-of-type) {
   display: none;
 }
 /*inputs*/
-
 /*edited padding for ie from 15px to 5*/
-
 #msform input[type="text"],
 #msform textarea {
   padding-left: 5px;
@@ -61,47 +39,45 @@ hr {
   color: #2C3E50;
   font-size: 13px;
 }
-
 /*buttons*/
-
-#msform .action-button {
-  width: 100px;
+#msform .next {
+  width: 130px;
   background: #00add8;
-  font-weight: bold;
   color: white;
   border: 0 none;
-  border-radius: 1px;
+  border-radius: 4px;
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px;
+  font-size: 16px;
+  font-weight: 200;
 }
-
-#msform .action-button:hover,
-#msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px @primary-color;
+#msform .next:hover {
+  background-color: #06708A;
 }
-
-
+#msform .previous {
+  font-size: 13px;
+  border: none;
+  background-color: white;
+  color: #999;
+}
 /*progressbar*/
-
 #progressbar {
   margin-bottom: 10px;
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
 }
-
 #progressbar li {
   list-style-type: none;
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   width: 35px;
-  margin-right:.75%;
+  margin-right: .75%;
   display: inline-block;
   position: relative;
 }
-
 #progressbar li:before {
   content: counter(step);
   counter-increment: step;
@@ -110,75 +86,150 @@ hr {
   font-size: 15px;
   color: #333;
   border: solid rgba(0, 173, 216, 0.2);
-  border-radius:50%;
+  border-radius: 50%;
   margin: 0 auto 5px auto;
 }
-
-
-
 /*The number of the step and the connector before it = green*/
-
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: @primary-color;
+  background: #00add8;
   color: white;
 }
-
 /* Jen's additional code */
-
-
 /* for Bag, Box, Mat, Vinyl selection */
-
-
 #msform label {
   font-size: 16px;
 }
-
 input + span {
-  font-size:18px;
-  font-weight:500;
+  font-size: 18px;
+  font-weight: 500;
 }
-
 .hide {
   display: none;
 }
-
 .form-list li {
   display: inline-block;
 }
-
 #msform .col2-set {
   margin-bottom: 30px;
 }
-
 @media screen and (max-width: 700px) {
   h1 {
-    font-size:26px;
+    font-size: 26px;
   }
-  h2 {
-    font-size:20px;
+  h2,
+  .label2 {
+    font-size: 20px;
   }
   #msform label {
     font-size: 13px;
   }
   .products-grid .product-item {
-    width:100%;
-    margin-bottom:20px;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 1024px) {
   .products-grid .product-item {
-    width:30%;
-    margin-bottom:30px;
+    width: 30%;
+    margin-bottom: 30px;
   }
 }
 label {
-  padding-right:15px;
+  padding-right: 15px;
+  font-size: 16px;
 }
 .packaging {
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 .input-size {
-  max-width:60px;
-  margin-right:30px;
+  max-width: 60px;
+  margin-right: 30px;
 }
+.inch-cm {
+  margin: 40px auto;
+}
+/*tooltip*/
+[class^="tooltip"] {
+  position: relative;
+}
+[class^="tooltip"]:after {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  content: attr(data-tooltip);
+  padding: 6px 10px;
+  top: 42px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
+  background: grey;
+  color: white;
+  white-space: wrap;
+  z-index: 2;
+  border-radius: 2px;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+[class^="tooltip"]:hover:after {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+}
+.tooltip--left:after {
+  top: -4px;
+  left: 0;
+  -webkit-transform: translateX(-112%) translateY(0);
+  transform: translateX(-112%) translateY(0);
+}
+.tooltip--left:hover:after {
+  -webkit-transform: translateX(-110%) translateY(0);
+  transform: translateX(-110%) translateY(0);
+}
+.tooltip--right:after {
+  top: -4px;
+  left: 100%;
+  -webkit-transform: translateX(12%) translateY(0);
+  transform: translateX(12%) translateY(0);
+}
+.tooltip--right:hover:after {
+  -webkit-transform: translateX(10%) translateY(0);
+  transform: translateX(10%) translateY(0);
+}
+.tooltip--triangle {
+  border-bottom: dashed 1px;
+  cursor: pointer;
+}
+/*
+.tooltip--triangle:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+  border-bottom: solid 5px grey;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  -webkit-transform: translateX(-50%) translateY(-2px);
+          transform: translateX(-50%) translateY(-2px);
+  top: 45px;
+  left: 50%;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  z-index: 3;
+}
+.tooltip--triangle:hover:before {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(-50%) translateY(0);
+          transform: translateX(-50%) translateY(0);
+}
+*/
