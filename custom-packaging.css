@@ -1,45 +1,76 @@
 /*custom font*/
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-hr {
-  margin-bottom: 60px;
+@primary-color: #00add8;
+
+.size li {
+  display:inline-block;
+  padding-left:5px;
+}
+
+.size label {
+  margin-right:-13px;
+}
+.size {
+  margin-top:20px;
+  padding:0;
+}
+
+.size input[type="text"] {
+  width:10px;
+}
+.inch-cm {
+  margin-top:40px;
+}
+.inch-cm span {
+  font-size:16px;
+  margin-right:10px;
 }
 #msform {
-  max-width: 1150px;
-  margin: 50px auto;
+  max-width: 800px;
+  margin: 10px auto;
   text-align: center;
   position: relative;
 }
-#msform fieldset {
-  background: white;
-  border: 0 none;
-  border-radius: 7px;
-  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
-  padding: 100px 10% 20px 10%;
-  box-sizing: border-box;
-  min-height: 950px;
-  width: 75%;
-  margin: 0 10%;
-  /*stacking fieldsets above each other*/
-  position: absolute;
-}
 /*Hide all except first fieldset*/
+
 #msform fieldset:not(:first-of-type) {
   display: none;
 }
 /*inputs*/
+
 /*edited padding for ie from 15px to 5*/
+
 #msform input[type="text"],
 #msform textarea {
   padding-left: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 10px;
-  width: 95%;
+  width: 65%;
   box-sizing: border-box;
   color: #2C3E50;
-  font-size: 13px;
+  font-size: 14px;
+}
+
+#msform select {
+  width:65%;
 }
 /*buttons*/
+
+#msform .submit {
+  width: 130px;
+  background: #00add8;
+  color: white;
+  border: 0 none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  font-size:16px;
+  font-weight:200;
+}
+
 #msform .next {
   width: 130px;
   background: #00add8;
@@ -49,35 +80,47 @@ hr {
   cursor: pointer;
   padding: 10px 5px;
   margin: 10px 5px;
-  font-size: 16px;
-  font-weight: 200;
+  font-size:16px;
+  font-weight:200;
 }
+
 #msform .next:hover {
-  background-color: #06708A;
+  background-color:#06708A;
 }
+
 #msform .previous {
-  font-size: 13px;
-  border: none;
-  background-color: white;
-  color: #999;
+  font-size:13px;
+  border:none;
+  background-color:white;
+  color:#999;
+}
+
+#msform .previous {
+  font-size:13px;
+  border:none;
+  background-color:white;
+  color:#999;
 }
 /*progressbar*/
+
 #progressbar {
   margin-bottom: 10px;
   overflow: hidden;
   /*CSS counters to number the steps*/
   counter-reset: step;
 }
+
 #progressbar li {
   list-style-type: none;
   color: white;
   text-transform: uppercase;
   font-size: 12px;
   width: 35px;
-  margin-right: .75%;
+  margin-right:.75%;
   display: inline-block;
   position: relative;
 }
+
 #progressbar li:before {
   content: counter(step);
   counter-increment: step;
@@ -85,73 +128,89 @@ hr {
   display: block;
   font-size: 15px;
   color: #333;
-  border: solid rgba(0, 173, 216, 0.2);
-  border-radius: 50%;
   margin: 0 auto 5px auto;
 }
+
+
+
 /*The number of the step and the connector before it = green*/
+
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #00add8;
-  color: white;
+  border-bottom: solid 5px #333;
 }
+
+
+
 /* Jen's additional code */
-/* for Bag, Box, Mat, Vinyl selection */
+h1.product-options {
+  margin-top:60px;
+  padding-top:60px;
+  border-top:solid silver 1px;
+}
+
 #msform label {
   font-size: 16px;
+  padding-right:15px;
 }
+
 input + span {
-  font-size: 18px;
-  font-weight: 500;
+  font-size:18px;
+  font-weight:500;
 }
+
 .hide {
   display: none;
 }
+
+hr {
+  margin-bottom: 60px;
+}
+
+#msform fieldset {
+  background: white;
+  box-sizing: border-box;
+  min-height:950px;
+  width: 100%;
+  /*stacking fieldsets above each other*/
+  position: absolute;
+}
+
 .form-list li {
-  display: inline-block;
+  display:inline;
 }
-#msform .col2-set {
-  margin-bottom: 30px;
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   h1 {
-    font-size: 26px;
+    font-size:26px;
+    padding:10px;
   }
-  h2,
-  .label2 {
-    font-size: 20px;
+  h2, .label2 {
+    font-size:20px;
   }
   #msform label {
     font-size: 13px;
   }
   .products-grid .product-item {
-    width: 100%;
-    margin-bottom: 20px;
+    margin-bottom:20px;
+  }
+  #msform input[type="text"],
+  #msform textarea {
+    width:95%;
   }
 }
-@media (min-width: 1024px) {
-  .products-grid .product-item {
-    width: 30%;
-    margin-bottom: 30px;
+
+@media screen and (min-width: 500px) {
+  #msform fieldset {
+    border-radius: 7px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+    padding: 60px 5% 40px 5%;
   }
-}
-label {
-  padding-right: 15px;
-  font-size: 16px;
-}
-.packaging {
-  margin-bottom: 40px;
-}
-.input-size {
-  max-width: 60px;
-  margin-right: 30px;
-}
-.inch-cm {
-  margin: 40px auto;
 }
 /*tooltip*/
+
 [class^="tooltip"] {
   position: relative;
+  padding-bottom:5px;
 }
 [class^="tooltip"]:after {
   opacity: 0;
@@ -162,7 +221,7 @@ label {
   top: 42px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-2px);
-  transform: translateX(-50%) translateY(-2px);
+          transform: translateX(-50%) translateY(-2px);
   background: grey;
   color: white;
   white-space: wrap;
@@ -178,58 +237,40 @@ label {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateX(-50%) translateY(0);
-  transform: translateX(-50%) translateY(0);
+          transform: translateX(-50%) translateY(0);
 }
-.tooltip--left:after {
-  top: -4px;
-  left: 0;
-  -webkit-transform: translateX(-112%) translateY(0);
-  transform: translateX(-112%) translateY(0);
-}
-.tooltip--left:hover:after {
-  -webkit-transform: translateX(-110%) translateY(0);
-  transform: translateX(-110%) translateY(0);
-}
-.tooltip--right:after {
-  top: -4px;
-  left: 100%;
-  -webkit-transform: translateX(12%) translateY(0);
-  transform: translateX(12%) translateY(0);
-}
-.tooltip--right:hover:after {
-  -webkit-transform: translateX(10%) translateY(0);
-  transform: translateX(10%) translateY(0);
-}
-.tooltip--triangle {
-  border-bottom: dashed 1px;
-  cursor: pointer;
-}
-/*
-.tooltip--triangle:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: solid 5px transparent;
-  border-right: solid 5px transparent;
-  border-bottom: solid 5px grey;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  -webkit-transform: translateX(-50%) translateY(-2px);
-          transform: translateX(-50%) translateY(-2px);
-  top: 45px;
-  left: 50%;
-  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-  z-index: 3;
-}
-.tooltip--triangle:hover:before {
+
+[class^="tooltip"]:focus:after {
   display: block;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateX(-50%) translateY(0);
           transform: translateX(-50%) translateY(0);
 }
-*/
+
+.tooltip--left:after {
+  top: -4px;
+  left: 0;
+  -webkit-transform: translateX(-112%) translateY(0);
+          transform: translateX(-112%) translateY(0);
+}
+.tooltip--left:hover:after {
+  -webkit-transform: translateX(-110%) translateY(0);
+          transform: translateX(-110%) translateY(0);
+}
+
+.tooltip--right:after {
+  top: -4px;
+  left: 100%;
+  -webkit-transform: translateX(12%) translateY(0);
+          transform: translateX(12%) translateY(0);
+}
+.tooltip--right:hover:after {
+  -webkit-transform: translateX(10%) translateY(0);
+          transform: translateX(10%) translateY(0);
+}
+
+.tooltip--triangle {
+  border-bottom:dashed 1px;
+  cursor:pointer;
+}
