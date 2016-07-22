@@ -1,0 +1,940 @@
+
+<!-- multistep form -->
+<form id="msform">
+    <!-- progressbar -->
+    <ul id="progressbar">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset class="fieldset">
+        <div class="field">
+            <h1>Select your desired custom packaging solution</h1>
+            <hr>
+            <div class="products wrapper grid products-grid">
+                <ol class="products-grid products list items product-items">
+                    <li class="item product product-item">
+                        <label for="custom-bag">
+                          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128394/cp-bag-link.png" width="100%">
+                        </label>
+                        <div class="product details product-item-details">
+                            <input type="radio" name="product" value="bag" id="custom-bag" data-related="product-bag" data-group="packaging" class="checkbox"><span><label for="custom-bag">Bags</label></span>
+                        </div>
+                    </li>
+                    <li class="item product product-item">
+                        <label for="custom-box">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128394/cp-box-link.png" width="100%">
+                        </label>
+                        <div class="product details product-item-details">
+                            <input type="radio" name="product" value="box" id="custom-box" data-related="product-box" data-group="packaging" class="checkbox"><span><label for="custom-box">Boxes</label></span>
+                        </div>
+                    </li>
+                    <li class="item product product-item">
+                        <label for="custom-mat">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128394/cp-mat-link.png" width="100%">
+                        </label>
+                        <div class="product details product-item-details">
+                            <input type="radio" name="product" value="mat" id="custom-mat" data-related="product-mat" data-group="packaging" class="checkbox"><span><label for="custom-mat">Mats</label></span>
+                        </div>
+                    </li>
+                    <li class="item product product-item">
+                        <label for="custom-other">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128394/cp-vinyl-link.png" width="100%">
+                        </label>
+                        <div class="product details product-item-details">
+                            <input type="radio" id="custom-other" class="checkbox" data-group="packaging" data-related="product-other" name="product" value="other"><span><label for="custom-other" name="product" value="other">Other</label></span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <input type="radio" class="checkbox" id="custom-sku" data-related="product-sku" data-group="packaging" name="product">
+                <label for="custom-sku">I have a reference sku/item</label>
+            </div>
+        </div>
+        <div class="hide product-sku packaging">
+            <h2>What is your sku?</h2>
+            <input type="text" class="checkbox" id="custom-sku" data-group="packaging" name="product" value="">
+        </div>
+        <div id="productbag" class="product-bag hide packaging">
+            <h1 class="product-options">Custom Bag</h1>
+            <hr>
+            <div class="field">
+                <h2>Select a product type</h2>
+                <div class="products wrapper grid products-grid">
+                    <ol class="products-grid products list items product-items">
+                        <li class="item product product-item">
+                            <label for="crystal-clear">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="one" data-group="package-att" type="radio" class="checkbox" id="crystal-clear" name="bag-style" value="Crystal Clear">
+                                <label for="crystal-clear">Crystal Clear</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="crystal-hanging">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="two" data-group="package-att" type="radio" class="checkbox" id="crystal-hanging" name="bag-style" value="Crystal Clear Hanging">
+                                <label for="crystal-hanging">Hanging</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="pouches">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="three" data-group="package-att" type="radio" class="checkbox" id="pouches" name="bag-style" value="Stand Up Pouches">
+                                <label for="pouches">Stand Up</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="zipper">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="four" data-group="package-att" type="radio" class="checkbox" id="zipper" name="bag-style" value="Zipper">
+                                <label for="zipper">Zipper</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="hanging-zipper">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="five" data-group="package-att" type="radio" class="checkbox" id="hanging-zipper" name="bag-style" value="Hanging Zipper">
+                                <label for="hanging-zipper">Hanging Zipper</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="gussets">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="six" data-group="package-att" type="radio" class="checkbox" id="gussets" name="bag-style" value="Gussets">
+                                <label for="gussets">Gusset</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="flat-bags">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="seven" data-group="package-att" type="radio" class="checkbox" id="flat-bags" name="bag-style" value="Flat Bags">
+                                <label for="flat-bags">Flat</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="bag-other">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input data-related="eight" data-group="package-att" type="radio" class="checkbox" id="bag-other" name="bag-style" value="Bag Other">
+                                <label for="bag-other">Other</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="field hide package-att one two three four five six seven">
+                <hr>
+                <h1>Select additional features</h1>
+                <div class="products wrapper grid products-grid">
+                    <ol class="products-grid products list items product-items">
+                        <li class="item product product-item hide one package-att">
+                            <label for="no-flap">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="no-flap" data-group="bag-att" name="Bag Attribute" value="No Flap">
+                                <label for="no-flap">No Flap</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide one package-att">
+                            <label for="flap-seal">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="flap-seal" data-group="bag-att" name="Bag Attribute" value="Flap Seal">
+                                <label for="flap-seal">Flap Seal</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide one package-att">
+                            <label for="pc">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="pc" data-group="bag-att" name="Bag Attribute" value="Protective Closure">
+                                <label for="pc">Protective Closure</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide two package-att">
+                            <label for="hang-flap-seal">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="hang-flap-seal" data-related="hang" data-group="bag-att" name="Bag Attribute" value="Flap Seal">
+                                <label for="hang-flap-seal">Flap Seal</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide two package-att">
+                            <label for="hang-pro-c">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="hang-pro-c" data-related="hang" data-group="bag-att" name="Bag Attribute" value="Protective Closure">
+                                <label for="hang-pro-c">Protective Closure</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide three package-att">
+                            <label for="eye-bottom-pouch">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="eye-bottom-pouch" data-group="pouch-att" data-related="pouch" name="Bag Attribute" value="Eye Bottom Pouch">
+                                <label for="eye-bottom-pouch">Pouch</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide three package-att">
+                            <label for="pouch-quad-seal">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="pouch-quad-seal" data-group="bag-att" data-related="closure" name="Bag Attribute" value="Quad Seal">
+                                <label for="pouch-quad-seal">Box Bottom Quad Seal</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide four five package-att">
+                            <label for="standard">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="standard" data-group="bag-att" name="Bag Attribute" value="Standard"><span class="tooltip--triangle" data-tooltip="tooltip"><label for="standard">Standard</label></span>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide four five package-att">
+                            <label for="sliding-zipper">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="sliding-zipper" data-group="bag-att" name="Bag Attribute" value="Sliding Zipper">
+                                <label for="sliding-zipper">Sliding Zipper</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide four five package-att">
+                            <label for="barrier">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="barrier" data-group="bag-att" name="Bag Attribute" value="Barrier">
+                                <label for="barrier">Barrier</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide six package-att">
+                            <label for="gusset-standard">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="gusset-standard" data-group="bag-att" name="Bag Attribute" value="Standard"><span class="tooltip--triangle" data-tooltip="tooltip"><label for="gusset-standard">Standard</label></span>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide six package-att">
+                            <label for="flat-bottom">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="flat-bottom" data-related="paper-insert" data-group="group-paper-insert" name="Bag Attribute" value="Flat Bottom">
+                                <label for="flat-bottom">Flat Bottom</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item hide one two three four five six package-att">
+                            <label for="bag-att-other">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="bag-att-other" data-group="bag-att" data-related="bag-atts-other" name="Bag Attribute" value="Bag Att Other">
+                                <label for="bag-att-other">Other</label>
+                            </div>
+                        </li>
+                    </ol>
+                    <ol class="products-grid products list items product-items hide bag-att paper-insert">
+                        <hr>
+                        <li class="item product product-item">
+                            <label for="bag-paper-insert">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="checkbox" class="checkbox" id="bag-paper-insert" name="Paper Insert" value="yes">
+                                <label for="bag-paper-insert">With a Paper Insert?</label>
+                            </div>
+                        </li>
+                    </ol>
+                    <ol class="products-grid products list items product-items hide bag-att hang">
+                        <hr>
+                        <h2>Select a loading type</h2>
+                        <li class="item product product-item">
+                            <label for="top-loading">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="top-loading" name="Loading Style" value="Top Loading">
+                                <label for="top-loading">Top Loading</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="bottom-loading">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="bottom-loading" name="Loading Style" value="Bottom Loading">
+                                <label for="bottom-loading">Bottom Loading</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="hide closure bag-att pouch-att">
+                    <hr>
+                    <h2>What type of closure will it have?</h2>
+                    <ul class="form-list product-select">
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="stand-up-zipper" data-group="stand-up-closure" name="Closure Type" value="Zipper">
+                            <label for="stand-up-zipper">Zipper</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="open-top" data-group="stand-up-closure" name="Closure Type" value="Open Top">
+                            <label for="open-top">Open Top</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hide closure bag-att pouch pouch-att">
+                    <hr>
+                    <h2>What type of <span class="tooltip--triangle" data-tooltip="tooltip">material</span> will it have?</h2>
+                    <ul class="form-list product-select">
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="pouch-clear" data-group="pouch-material" name="Pouch Material" value="Clear">
+                            <label for="pouch-clear">Clear</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="pouch-metallized" data-group="pouch-material" data-related="window" name="Pouch Material" value="Metallized">
+                            <label for="pouch-metallized"><span class="tooltip--triangle" data-tooltip="tooltip">Metallized</span>
+                            </label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="pouch-kraft" data-group="pouch-material" data-related="window" name="Pouch Material" value="Kraft">
+                            <label for="pouch-kraft">Kraft</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="pouch-rice-paper" data-group="pouch-material" name="Pouch Material" value="Rice Paper">
+                            <label for="pouch-rice-paper">Rice Paper</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" class="checkbox" id="pouch-other" data-group="pouch-material" data-related="pouch-material-other" name="Pouch Material" value="Pouch Other">
+                            <label for="pouch-other">Other</label>
+                        </li>
+                    </ul>
+                    <div class="field hide pouch-material-other pouch-material">
+                        <h2>What type of material would you like?</h2>
+                        <div class="input-box">
+                            <textarea class="input-text" cols="5" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="hide window pouch-material">
+                        <hr>
+                        <h2>Would you like a window?</h2>
+                        <ul class="form-list product-select">
+                            <li class="control">
+                                <input type="radio" id="flat-bag-metallized-yes" class="checkbox" name="Flat Bag Metallized" value="yes">
+                                <label for="flat-bag-metallized-yes">Yes</label>
+                            </li>
+                            <li class="control">
+                                <input type="radio" id="flat-bag-metallized-no" class="checkbox" name="Flat Bag Metallized" value="no">
+                                <label for="flat-bag-metallized-no">No</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <ol class="products-grid products list items product-items">
+                        <hr>
+                        <h2>Select extra features</h2>
+                        <li class="item product product-item">
+                            <label for="degas-valve">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="checkbox" class="checkbox" id="degas-valve" name="bag-style" value="Degas-valve">
+                                <label for="degas-valve">Degassing Valve</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="hide bag-att seven">
+                    <h2>Would you like <span class="tooltip--triangle" data-tooltip="tooltip"><span class="label2">metallized</span></span> material</h2>
+                    <ul class="form-list product-select">
+                        <li class="control">
+                            <input type="radio" id="flat-bag-metallized-yes" class="checkbox" name="Flat Bag Metallized" value="yes">
+                            <label for="flat-bag-metallized-yes">Yes</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" id="flat-bag-metallized-no" class="checkbox" name="Flat Bag Metallized" value="no">
+                            <label for="flat-bag-metallized-no">No</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="productbox" class="product-box hide packaging">
+            <h1 class="product-options">Custom Box</h1>
+            <hr>
+            <div class="field">
+                <h2>Select a product type</h2>
+                <div class="products wrapper grid products-grid">
+                    <ol class="products-grid products list items product-items">
+                        <li class="item product product-item">
+                            <label for="soft-fold">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="soft-fold" data-related="box-soft-fold" data-group="box-attributes" name="box-style" value="Soft Fold">
+                                <label for="soft-fold">Standard Soft Fold</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="pop-and-lock">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="pop-and-lock" data-related="box-pop-lock" data-group="box-attributes" name="box-style" value="Pop and Lock">
+                                <label for="pop-and-lock">Auto Lock <small>(Pop and Lock)</small>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tab-tuck">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tab-tuck" data-related="box-tab-tuck" data-group="box-attributes" name="box-style" value="Tab Tuck">
+                                <label for="tab-tuck">Tab Tuck</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="pillow">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="pillow" data-related="box-pillow" data-group="box-attributes" name="box-style" value="Pillow">
+                                <label for="pillow">Pillow</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="two-piece">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="two-piece" data-related="box-two-piece" data-group="box-attributes" name="box-style" value="Two Piece">
+                                <label for="two-piece">Two Piece</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tube">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube" data-related="box-tube" data-group="box-attributes" name="box-style" value="Tube">
+                                <label for="tube">Tube</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="clam-shell">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="clam-shell" data-related="box-clam" data-group="box-attributes" name="box-style" value="Clam Shell">
+                                <label for="clam-shell">Clamshell</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="other">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="other" data-related="box-other" data-group="box-attributes" name="box-style" value="Other">
+                                <label for="other">Other</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="products wrapper grid products-grid hide box-attributes box-soft-fold box-pop-lock box-tab-tuck box-pillow">
+                <h2>What type of <span class="tooltip--triangle" data-tooltip="tooltip">material</span> will it have?</h2>
+                <ul class="hide box-attributes box-soft-fold box-pop-lock form-list product-select">
+                    <li class="control">
+                        <input type="radio" id="clear-b" class="checkbox" data-group="box-material" data-related="clear-b" name="Material-1" value="clear">
+                        <label for="clear-b">Clear</label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="paper-a" class="checkbox" data-group="box-material" data-related="paper-a" name="Material-1" value="paper">
+                        <label for="paper-a">Paper</label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="kraft-a" class="checkbox" data-group="box-material" data-related="kraft-a" name="Material-1" value="kraft">
+                        <label for="kraft-a">Kraft</label>
+                    </li>
+                </ul>
+                <ul class="hide box-attributes box-pillow box-tab-tuck form-list product-select">
+                    <li class="control">
+                        <input type="radio" id="clear-b" class="checkbox" data-related="clear-b" data-group="box-material" name="Material-2" value="clear">
+                        <label for="clear-b">Clear</label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="paper-b" class="checkbox" data-group="box-material" data-related="paper-b" name="Material-2" value="paper">
+                        <label for="paper-b">Paper</label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="kraft-b" class="checkbox" data-group="box-material" data-related="kraft-b" name="Material-2" value="kraft">
+                        <label for="kraft-b">Kraft</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="field hide box-material clear-b">
+                <hr>
+                <h2>What type of <span class="tooltip--triangle" data-tooltip="tooltip">material</span> will it have?</h2>
+                <ul class="form-list product-select">
+                    <li class="control">
+                        <input type="radio" id="pet" class="checkbox" data-group="group-material" name="Material" value="pet">
+                        <label for="pet"><span class="tooltip--triangle" data-tooltip="tooltip">PET</span>
+                        </label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="pvc" class="checkbox" data-group="group-material" name="Material" value="pvc">
+                        <label for="pvc"><span class="tooltip--triangle" data-tooltip="tooltip">PVC</span>
+                        </label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="box-material-other" class="checkbox" data-related="material-other" data-group="group-material" name="Material" value="other">
+                        <label for="material-other">Other</label>
+                    </li>
+                </ul>
+                <div class="field hide material-other group-material">
+                    <h2>What type of material would you like?</h2>
+                    <div class="input-box">
+                        <textarea class="input-text" cols="5" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="field hide box-material clear-b paper-a paper-b kraft-a kraft-b">
+                <hr>
+                <h2>Do you need a <span class="tooltip--triangle" data-tooltip="tooltip">tray</span> or <span class="tooltip--triangle" data-tooltip="tooltip">insert</span>?</h2>
+                <ul class="form-list product-select">
+                    <li class="control">
+                        <input type="radio" id="print-yes" class="checkbox" data-related="tray-insert" data-group="group-tray-insert" name="insert" value="yes">
+                        <label for="print-yes">Yes</label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="print-no" class="checkbox" data-group="group-tray-insert" name="insert" value="no">
+                        <label for="print-no">No</label>
+                    </li>
+                </ul>
+                <div id="insertyes" class="insert-field hide tray-insert group-tray-insert">
+                    <div class="products wrapper grid products-grid">
+                        <ol class="products-grid products list items product-items">
+                            <li class="item product product-item">
+                                <label for="blister-tray">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128394/blister-tray.png">
+                                </label>
+                                <div class="product details product-item-details">
+                                    <input type="checkbox" id="blister-tray" class="checkbox" name="tray-style" value="Blister Tray">
+                                    <label for="blister-tray">Blister Tray</label>
+                                </div>
+                            </li>
+                            <li class="item product product-item">
+                                <label for="folded-insert">
+                                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/128394/folded-insert.png">
+                                </label>
+                                <div class="product details product-item-details">
+                                    <input type="checkbox" id="folded-insert" class="checkbox" name="tray-style" value="Folded Insert">
+                                    <label for="folded-insert">Folded Insert</label>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <hr>
+                <h2>Do you need a <span class="tooltip--triangle" data-tooltip="tooltip">hang tab</span>?</h2>
+                <ul class="form-list product-select">
+                    <li class="control">
+                        <input id="box-hangtab-yes" class="checkbox" type="radio" name="Hang Tab" value="yes">
+                        <label for="box-hangtab-yes">Yes</label>
+                    </li>
+                    <li class="control">
+                        <input id="box-hangtab-no" class="checkbox" type="radio" name="Hang Tab" value="no">
+                        <label for="box-hangtab-no">No</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="hide box-attributes box-two-piece">
+                <div class="products wrapper grid products-grid">
+                    <h2>Would you like a <span class="tooltip--triangle" data-tooltip="tooltip">top</span> or <span class="tooltip--triangle" data-tooltip="tooltip">slip cover</span>?</h2>
+                    <ol class="products-grid products list items product-items">
+                        <li class="item product product-item">
+                            <label for="two-piece-top">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="two-piece-top" data-related="box-part-one" data-group="two-piece-material" name="Two Piece Part" value="Top">
+                                <label for="two-piece-top">Top</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="two-piece-cover">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="two-piece-cover" data-related="box-part-one" data-group="two-piece-material" name="Two Piece Part" value="Cover">
+                                <label for="two-piece-cover">Slip Cover</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="products wrapper grid products-grid hide box-part-one two-piece-material">
+                    <hr>
+                    <h2>Select the desired top <span class="tooltip--triangle" data-tooltip="tooltip">material</span></h2>
+                    <ul class="form-list product-select">
+                        <li class="control">
+                            <input type="radio" id="part-one-clear" class="checkbox" name="Part-One" value="Clear">
+                            <label for="part-one-clear">Clear</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" id="part-one-paper" class="checkbox" name="Part-One" value="Colored Paper">
+                            <label for="part-one-paper">Colored Paper</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" id="part-one-kraft" class="checkbox" name="Part-One" value="Kraft">
+                            <label for="part-one-kraft">Kraft</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="products wrapper grid products-grid hide box-part-one two-piece-material">
+                    <hr>
+                    <h2>Select the desired bottom <span class="tooltip--triangle" data-tooltip="tooltip">material</span></h2>
+                    <ul class="form-list product-select">
+                        <li class="control">
+                            <input type="radio" id="bottom-clear" class="checkbox" name="Bottom" value="Clear">
+                            <label for="bottom-clear">Clear</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" id="bottom-paper" class="checkbox" name="Bottom" value="Colored Paper">
+                            <label for="bottom-paper">Colored Paper</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" id="bottom-kraft" class="checkbox" name="Bottom" value="Kraft">
+                            <label for="bottom-kraft">Kraft</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hide box-attributes box-tube">
+                <div class="products wrapper grid products-grid">
+                    <h2>Select the desired tube shape</h2>
+                    <ol class="products-grid products list items product-items">
+                        <li class="item product product-item">
+                            <label for="tube-round">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube-round" data-group="box-att" data-related="round-tube" name="Tube Shape" value="Round">
+                                <label for="tube-round">Round</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tube-eye">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube-eye" data-group="box-att" data-related="eye-tube" name="Tube Shape" value="Eye">
+                                <label for="tube-eye">Eye</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tube-hexagon">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube-hexagon" data-group="box-att" data-related="hexagon-tube" name="Tube Shape" value="Hexagon">
+                                <label for="tube-hexagon">Hexagon</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tube-triangle">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube-triangle" data-group="box-att" data-related="triangle-tube" name="Tube Shape" value="Triangle">
+                                <label for="tube-triangle">Triangle</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tube-square">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube-square" data-group="box-att" data-related="square-tube" name="Tube Shape" value="Square">
+                                <label for="tube-square">Square</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="tube-other">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" class="checkbox" id="tube-other" data-group="box-att" data-related="other-tube" name="Tube Shape" value="Other">
+                                <label for="tube-other">Other</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="products wrapper grid products-grid hide box-att round-tube eye-tube hexagon-tube triangle-tube square-tube">
+                    <hr>
+                    <h2>Select the desired <span class="tooltip--triangle" data-tooltip="tooltip">material</span></h2>
+                    <ul class="form-list product-select">
+                        <li class="control">
+                            <input type="radio" id="tube-clear" class="checkbox" name="Tube Material" value="Clear Tube">
+                            <label for="tube-clear">Clear</label>
+                        </li>
+                        <li class="control">
+                            <input type="radio" id="tube-kraft" class="checkbox" name="Tube Material" value="Kraft Tube">
+                            <label for="tube-kraft">Kraft</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hide box-attributes box-clam">
+                <h2>Do you need a <span class="tooltip--triangle" data-tooltip="tooltip">hang tab</span>?</h2>
+                <ul class="form-list product-select">
+                    <li class="control">
+                        <input id="box-hangtab-clam-yes" class="checkbox" type="radio" name="Clam Hang Tab" value="yes">
+                        <label for="box-hangtab-clam-yes">Yes</label>
+                    </li>
+                    <li class="control">
+                        <input id="box-hangtab-clam-no" class="checkbox" type="radio" name="Clam Hang Tab" value="no">
+                        <label for="box-hangtab-clam-no">No</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="productmat" class="product-mat hide packaging">
+            <h1 class="product-options">Custom Mat Boards</h1>
+            <hr>
+            <div class="field">
+                <h2>Select the style</h2>
+                <div class="products wrapper grid products-grid">
+                    <ol class="products-grid products list items product-items">
+                        <li class="item product product-item">
+                            <label for="single-mat">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" id="single-mat" class="checkbox" data-group="mat-options" data-related="mat-att" name="Mat Style" value="Single">
+                                <label for="single-mat">Single</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="double-mat">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" id="double-mat" class="checkbox" data-group="mat-options" data-related="mat-att" name="Mat Style" value="Double">
+                                <label for="double-mat">Double</label>
+                            </div>
+                        </li>
+                        <li class="item product product-item">
+                            <label for="other-mat">
+                                <img src="http://placehold.it/150x150" width="100%">
+                            </label>
+                            <div class="product details product-item-details">
+                                <input type="radio" id="other-mat" class="checkbox" name="Mat Style" value="Other">
+                                <label for="other-mat">Other</label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="field hide mat-options">
+                <h2>Please describe the style of mat you'd like.</h2>
+                <div class="input-box">
+                    <textarea class="input-text" cols="5" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="field hide mat-options mat-att mat-other">
+                <hr>
+                <h2>Select the board type</h2>
+                <ul class="form-list product-select">
+                    <li class="control">
+                        <input type="radio" id="decorative" class="checkbox" data-group="board-type" name="Board Type" value="Decorative">
+                        <label for="decorative"><span class="tooltip--triangle" data-tooltip="tooltip">ClearBags Decorative</span>
+                        </label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="conservation" class="checkbox" data-group="board-type" name="Board Type" value="Conservative">
+                        <label for="conservation"><span class="tooltip--triangle" data-tooltip="tooltip">Conservation</span>
+                        </label>
+                    </li>
+                    <li class="control">
+                        <input type="radio" id="board-type-other" data-group="board-type" data-related="board-other" class="checkbox" name="Board Type" value="Other">
+                        <label for="board-type-other">Other</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="field hide mat-options mat-att">
+                <hr>
+                <h2>Select your mat color</h2>
+                <div class="option-list">
+                    <select name="mat-color">
+                        <option selected="selected">Select a Color</option>
+                        <option value="White/Cream Core">White/Cream Core</option>
+                        <option value="White/White Core">White/White Core</option>
+                        <option value="White/Black Core">White/Black Core</option>
+                        <option value="Black/Cream Core">Black/Cream Core</option>
+                        <option value="Black/White Core">Black/White Core</option>
+                        <option value="Black/Black Core">Black/Black Core</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <input type="button" name="next" class="next action-button" value="Next">
+    </fieldset>
+
+    <fieldset class="fieldset">
+        <h1>Printing Options</h1>
+        <hr>
+        <h2>Do you need <span class="tooltip--triangle" data-tooltip="tooltip">printing</span>?</h2>
+        <ul class="form-list product-select">
+            <li class="control">
+                <input type="radio" id="printing-yes" class="checkbox" data-group="print-group" data-related="yes-print" name="Printing" value="Yes">
+                <label for="printing-yes">Yes</label>
+            </li>
+            <li class="control">
+                <input type="radio" id="printing-no" class="checkbox" data-group="print-group" name="Printing" value="No">
+                <label for="printing-no">No</label>
+            </li>
+        </ul>
+        <div class="field hide print-group yes-print">
+            <h2>How many <span class="tooltip--triangle" data-tooltip="tooltip">colors</span> are in your artwork?</h2>
+            <p><small>Note: If white is in your artwork, it will be considered a color.</small>
+            </p>
+            <div class="option-list">
+                <select name="mat-color">
+                    <option selected="selected">Choose your colors</option>
+                    <option value="White/Cream Core">Full Color</option>
+                    <option value="White/White Core">1 Color</option>
+                    <option value="White/Black Core">2 Color</option>
+                    <option value="Black/Cream Core">3 Color</option>
+                    <option value="Black/White Core">4 Color</option>
+                    <option value="Black/Black Core">4 Color + Spot</option>
+                    <option value="Black/Black Core">5-8 Color</option>
+                    <option value="Other">Not Sure</option>
+                </select>
+            </div>
+        </div>
+        <hr>
+        <input type="button" name="previous" class="previous action-button" value="<< Previous">
+        <input type="button" name="next" class="next action-button" id="next-button" value="Next">
+    </fieldset>
+    <fieldset class="fieldset">
+        <div class="field">
+            <hr>
+            <h2>Describe your project</h2>
+            <textarea class="input-text project-description" cols="5" rows="3"></textarea>
+        </div>
+        <hr>
+        <input type="button" name="previous" class="previous action-button" value="<< Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset class="fieldset">
+        <h1>Now, the finishing touches</h1>
+        <hr>
+        <div class="field required">
+            <h2>What is the <span class="tooltip--triangle" data-tooltip="tooltip">size</span> you'd like made?</h2>
+            <div class="inch-cm">
+                <span>Please select:</span>
+                <input type="radio" class="checkbox" name="measurement" id="inch" value="inch">
+                <label for="inch">inch</label>
+                <input type="radio" class="checkbox" name="measurement" id="cm" value="cm">
+                <label for="cm">cm</label>
+            </div>
+            <ul class="form-list size">
+                <li class="control">
+                    <label>Width</label>
+                    <input style="width:80px;" type="text" id="width" title="Product Size" class="input-text" name="product-size" value="">
+                </li>
+                <li class="control">
+                    <label>Depth</label>
+                    <input style="width:80px;" type="text" id="depth" title="Product Size" class="input-text" name="product-size" value="">
+                </li>
+                <li class="control">
+                    <label>Length</label>
+                    <input style="width:80px;" type="text" id="length" title="Product Size" class="input-text" name="product-size" value="">
+                </li>
+            </ul>
+        </div>
+        <div class="field required">
+            <h2><span class="tooltip--triangle" data-tooltip="tooltip">How many</span> would you like made?</h2>
+            <input type="text" name="quantity" class="input-text" placeholder="ie. 5000" data-validate="{required:true}">
+        </div>
+        <div class="field required">
+            <h2>What is your <span class="tooltip--triangle" data-tooltip="tooltip">estimated budget?</span></h2>
+            <input type="text" name="budget" class="input-text" placeholder="ie. 1000" data-validate="{required:true}">
+        </div>
+        <div class="field required">
+            <h2>What is your <span class="tooltip--triangle" data-tooltip="tooltip">approximate lead time?</span></h2>
+            <input type="text" name="lead-time" class="input-text" placeholder="ie. 1 month from now" data-validate="{required:true}">
+        </div>
+        <hr>
+        <input type="button" name="previous" class="previous action-button" value="<< Previous">
+        <input type="button" name="next" class="next action-button" value="Next">
+    </fieldset>
+    <fieldset class="fieldset">
+        <h1>How should we get in touch?</h1>
+        <hr>
+        <div class="field name required">
+            <h2>What is your <span class="tooltip--triangle" data-tooltip="Not to worry, we won't sell your information">name</span>?</h2>
+            <div class="control">
+                <input name="name" id="name" title="Name" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field company required">
+            <h2>What <span class="tooltip--triangle" data-tooltip="Not to worry, we won't sell your information">company</span> are you representing?</h2>
+            <div class="control">
+                <input name="company" id="company" title="Company" class="input-text" type="text" data-validate="{required:true}">
+            </div>
+        </div>
+        <div class="field email required">
+            <h2>What is your email?</h2>
+            <div class="control">
+                <input name="email" id="email" title="Email" class="input-text" type="text" data-validate="{required:true, 'validate-email':true}">
+            </div>
+        </div>
+        <div class="field telephone required">
+            <h2>What is your <span class="tooltip--triangle" data-tooltip="Not to worry, we won't sell your information">phone number</span>?</h2>
+            <div class="control">
+                <input name="telephone" id="telephone" title="Phone Number" class="input-text" type="text">
+            </div>
+        </div>
+        <hr>
+        <input type="button" name="previous" class="previous action-button" value="<< Previous">
+        <input type="submit" name="" class="submit action-button" value="Get a Quote">
+    </fieldset>
+</form>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<!-- jQuery easing plugin http://gsgd.co.uk/sandbox/jquery/easing/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>

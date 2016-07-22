@@ -1,0 +1,74 @@
+  #cp {
+                            text-align:center;
+                            padding:20px;
+
+                        }
+                        #cp section {
+                            margin-bottom: 100px;
+                            padding-bottom: 45px;
+                            border-bottom:solid 1px silver;
+                        }
+                        .call-to-act {
+                            margin:20px auto;
+                            max-width:600px;
+                        }
+                        h1 {
+                            font-weight:400;
+                            color:#636363;
+                        }
+                        p.cp-faq {
+                            padding-top:15px;
+                        }
+                        .testimonial-carousel {
+                            max-width:300px;
+                        }
+                        h3 {
+                            margin-top:50px;
+                             }   
+                        
+                        h2 {
+                            text-align:left;
+                             }
+    section.testimonials h1 {
+        margin-bottom:95px;
+    }
+                         .arrow {
+                             margin:40px auto 10px auto;
+                             -webkit-animation: downarrow 1.0s infinite alternate ease-in-out;
+                         }
+                        @-webkit-keyframes downarrow {
+                              0% { -webkit-transform: translateY(0); opacity: 0.4 }
+                              100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
+                        }
+                         @media only screen and (max-width:500px) {
+                            .lg {
+                                display:none;
+                            } 
+                             .two {
+                                 margin:0 auto;
+                             }
+                        }
+                        @media only screen and (min-width:500px) {
+                            .sm {
+                                display:none;
+                            }
+                            .two {
+                            float:left;
+                             }
+                        .two:not(:first-of-type){
+                            margin-left:130px;
+                             }
+                       }
+                        .carousel-section {
+                            margin-top:40px;
+                       }
+                        @media only screen and (max-width:1200px) {
+                            .two:nth-child(3) {
+                                margin-left:10px;
+                            }
+                        }
+                         @media only screen and (max-width:850px) {
+                            .two:nth-child(2) {
+                                margin-left:10px;
+                            }
+                        }
